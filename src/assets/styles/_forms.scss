@@ -1,0 +1,86 @@
+@import './variables';
+
+
+
+.search-box {
+    position: relative;
+    width: 20rem;
+    
+    img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: .8;
+        &.search-icon {
+            left: .8rem;
+        }
+        &.mic-icon {
+            right: .6rem;
+            cursor: pointer;
+        }
+    }
+
+    input {
+        border-radius: 3px;
+        width: 100%;
+        padding: .5rem .5rem .5rem 2.5rem;
+        border: none;
+        outline: none;
+        background-color: $secondary-color;
+        color: white;
+        &::placeholder {
+            color: $text-muted;
+        }
+    }
+
+}
+
+.action-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 3px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    transition: .3s;
+    img {
+        width: 1.5rem;
+    }
+}
+.main-btn,.secondary-btn {
+    gap: .625rem;
+    width: 9.5rem;
+    height: 3rem;
+
+}
+
+.main-btn {
+    background-color: $blue-color;
+    &:hover {
+        background-color: #5f7fff;
+    }
+}
+.secondary-btn {
+    background-color: rgb(255, 255, 255, .1);
+    backdrop-filter: blur(10px);
+    &:hover {
+        background-color: rgb(255, 255, 255, .2);
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  
+    button {
+      background-color: $secondary-color;
+      padding: .6rem;
+      width: 2rem;
+      height: 2rem;
+    } 
+}

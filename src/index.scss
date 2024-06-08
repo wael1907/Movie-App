@@ -1,0 +1,33 @@
+// Default theme
+@import '@splidejs/react-splide/css';
+
+
+// or other themes
+@import '@splidejs/react-splide/css/skyblue';
+@import '@splidejs/react-splide/css/sea-green';
+
+
+// or only core styles
+@import '@splidejs/react-splide/css/core';
+
+@import "./assets/styles/main.scss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: $main-color !important;
+  margin: 0;
+  font-family: "Poppins", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

@@ -1,0 +1,140 @@
+@import "./../../assets/styles/variables";
+
+.hero {
+  .main-item {
+    position: relative;
+
+    .main--item-film {
+      position: relative;
+      img {
+        width: 100%;
+        height: 34.375rem;
+      }
+
+      &::before {
+        content: "";
+        background-image: linear-gradient(90deg, $main-color, transparent);
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      &::after {
+        content: "";
+        background-image: linear-gradient(-90deg, $main-color, transparent);
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+
+    .main--item-info {
+      position: absolute;
+      left: 2rem;
+      top: 3rem;
+
+      h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: white;
+      }
+
+      span {
+        font-weight: 500;
+        font-size: 1.1rem;
+      }
+
+      h2,
+      p {
+        margin-bottom: 0.5rem;
+      }
+      p {
+        color: rgb(202, 202, 202);
+      }
+    }
+
+    .actions {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+}
+
+.recommended {
+  padding: 2rem 1rem;
+}
+
+.splide {
+    padding: 2rem 1rem 0;
+
+    .splide__arrows {
+      .splide__arrow {
+        top: 0 !important;
+        background-color: $secondary-color;
+        &:hover {
+            svg {
+                fill: white;
+            }
+        }
+    
+        &.splide__arrow--prev {
+          left: auto !important;
+          right: 4rem;
+        }
+    
+        svg {
+            fill: white;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    
+      }
+    }
+}
+
+
+@media(max-width: 767px) {
+  main {
+    .hero {
+      .main-item {
+        .main--item-film img {
+          height: 20rem;
+        }
+        .main--item-info {
+          left: .5rem;
+          bottom: 1rem;
+          top: auto;
+          h2 {
+            font-size: 1.325rem;
+          }
+          p,span {
+            font-size: .825rem;
+          }
+          .actions {
+            flex-direction: column;
+            button {
+              font-size: .725rem;
+              width: 7.5rem;
+              height: 2.5rem;          
+              img {
+                width: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .recommended {
+      h4 {
+        margin-bottom: 2rem !important;
+      }
+      .film {
+        width: 100%;
+      }
+    }
+  }
+}

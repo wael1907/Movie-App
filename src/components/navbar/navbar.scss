@@ -1,0 +1,90 @@
+@import "./../../assets/styles/variables";
+
+nav {
+  background-color: $main-color;
+  padding: 0.5rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  .brand {
+    width: 7rem;
+  }
+
+  .right-section {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+}
+
+.icon {
+  width: 1.2rem;
+}
+.nav-item.dropdown {
+  list-style: none;
+}
+.nav-link.dropdown-toggle {
+  &::after {
+    display: none;
+  }
+  background-color: $secondary-color;
+  padding: 0.45rem;
+  border-radius: 3px;
+}
+
+.dropdown-menu {
+  li {
+    a {
+      border-bottom: 1px solid $third-color;
+    }
+    &:last-of-type {
+      a {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &.show {
+    background-color: $secondary-color;
+    width: 22.9rem;
+    right: -3px !important;
+    z-index: 1000;
+    .dropdown-item {
+      color: $text-muted;
+      padding: 1rem 1.5rem 1rem 0.6rem;
+      position: relative;
+      white-space: wrap;
+
+      &::after {
+        content: "";
+        width: 7px;
+        height: 7px;
+        background-color: $text-muted;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        right: 0.5rem;
+        transform: translateY(-50%);
+      }
+
+      &:active,
+      &:focus,
+      &:hover {
+        background-color: $third-color;
+      }
+    }
+  }
+}
+
+
+
+@media(max-width: 767px) {
+  nav {
+    .right-section {
+      .search-box {
+        width: 10rem;
+      }
+    }
+  }
+}
